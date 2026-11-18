@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ContactHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <h1>ContactHub</h1>
+        <div id="userNavigation" hidden>
+            <span id="welcomeUser"></span>
+            <button id="profileBtn">My Profile</button>
+            <button id="logoutBtn">Logout</button>
+        </div>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Contact Management System</h2>
+    <p>Manage your contacts easily in one place.</p>
+</section>
+
+<main class="container">
+
+    <!-- Registration -->
+    <section id="registerSection" class="form-section">
+        <h2>Create Account</h2>
+        <form id="registerForm">
+            <label>Full Name</label>
+            <input type="text" id="regName" required>
+
+            <label>Email</label>
+            <input type="email" id="regEmail" required>
+
+            <label>Password</label>
+            <input type="password" id="regPassword" minlength="6" required>
+
+            <button type="submit">Register</button>
+        </form>
+        <p>Already have an account?
+            <a href="#" id="showLogin">Login here</a>
+        </p>
+    </section>
+
+    <!-- Login -->
+    <section id="loginSection" class="form-section" hidden>
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label>Email</label>
+            <input type="email" id="loginEmail" required>
+
+            <label>Password</label>
+            <input type="password" id="loginPassword" required>
+
+            <button type="submit">Login</button>
+        </form>
+        <p>New user?
+            <a href="#" id="showRegister">Create an account</a>
+        </p>
+    </section>
+
+    <!-- User Profile -->
+    <section id="profileSection" class="form-section" hidden>
+        <h2>My Profile</h2>
+        <form id="profileForm">
+            <label>Full Name</label>
+            <input type="text" id="profileName" required>
+
+            <label>Email</label>
+            <input type="email" id="profileEmail" required>
+
+            <button type="submit">Update Profile</button>
+            <button type="button" id="closeProfile" class="cancel-btn">
+                Back to Contacts
+            </button>
+        </form>
+    </section>
+
+    <!-- Contact Management -->
+    <div id="dashboard" hidden>
+        
+        <section class="user-stats" id="userStats">
+
+    <div class="user-stat-card">
+        <h3>Total Contacts</h3>
+        <p id="userTotalContacts">0</p>
+    </div>
+
+    <div class="user-stat-card pending-card">
+        <h3>Pending</h3>
+        <p id="userPending">0</p>
+    </div>
+
+    <div class="user-stat-card progress-card">
+        <h3>In Progress</h3>
+        <p id="userProgress">0</p>
+    </div>
+
+    <div class="user-stat-card resolved-card">
+        <h3>Resolved</h3>
+        <p id="userResolved">0</p>
+    </div>
+
+</section>
+        <section id="adminDashboard" hidden>
+
+    <h2>Admin Dashboard</h2>
+    <p>Welcome to ContactHub Administration Panel.</p>
+
+    <div class="stats-container">
+
+        <div class="stat-card">
+            <h3>Total Users</h3>
+            <p id="totalUsers">0</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>Total Contacts</h3>
+            <p id="totalContacts">0</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>Pending</h3>
+            <p id="pendingContacts">0</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>In Progress</h3>
+            <p id="progressContacts">0</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>Resolved</h3>
+            <p id="resolvedContacts">0</p>
+        </div>
+
+    </div>
+
+    <section class="records-section">
+        <h2>All Submitted Contacts</h2>
+        <input type="search" id="adminSearch"
+            placeholder="Search all contacts">
+
+        <div id="adminContactList"></div>
+    </section>
+
+</section>
+
+        <section class="form-section" id="contact">
+            <h2 id="formTitle">Add New Contact</h2>
+
+            <form id="contactForm">
+                <input type="hidden" id="editIndex">
+
+                <label>Full Name</label>
+                <input type="text" id="name" required>
+
+                <label>Email</label>
+                <input type="email" id="email" required>
+
+                <label>Phone Number</label>
+                <input type="tel" id="phone" required>
+
+                <label>Subject</label>
+                <input type="text" id="subject" required>
+
+                <label>Message</label>
+                <textarea id="message" required></textarea>
+
+                <button type="submit" id="submitBtn">Save Contact</button>
+                <button type="button" id="cancelBtn" class="cancel-btn" hidden>
+                    Cancel Edit
+                </button>
+            </form>
+            <p id="successMessage"></p>
+        </section>
+
+        <section class="records-section">
+            <h2>Manage Contacts</h2>
+
+            <input type="search" id="searchInput"
+                placeholder="Search contacts">
+
+            <label>Filter by Status</label>
+            <select id="statusFilter">
+                <option value="All">All Contacts</option>
+                <option value="Pending">Pending</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Resolved">Resolved</option>
+            </select>
+
+            <div id="contactList"></div>
+        </section>
+
+    </div>
+
+</main>
+
+<footer>
+    <p>© 2026 ContactHub. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

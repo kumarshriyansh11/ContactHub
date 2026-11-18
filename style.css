@@ -1,0 +1,476 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f7fc;
+    color: #333;
+}
+
+header, footer {
+    background: #172554;
+    color: white;
+    padding: 15px 8%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h1 {
+    margin: 0;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    text-align: center;
+    background: #2563eb;
+    color: white;
+    padding: 40px 15px;
+}
+
+.container {
+    max-width: 750px;
+    width: 92%;
+    margin: 30px auto;
+}
+
+.form-section, .records-section {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px #00000012;
+}
+
+h2 {
+    color: #172554;
+}
+
+label {
+    display: block;
+    margin: 15px 0 7px;
+    font-weight: bold;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 11px 16px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 5px 3px 5px 0;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+.cancel-btn {
+    background: #64748b;
+}
+
+.contact-card {
+    background: #f8fafc;
+    border-left: 4px solid #2563eb;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 6px;
+    overflow-wrap: anywhere;
+}
+
+.contact-card h3 {
+    color: #172554;
+}
+
+.contact-card select {
+    margin-top: 10px;
+}
+
+.delete-btn {
+    background: #dc2626;
+}
+
+.delete-btn:hover {
+    background: #b91c1c;
+}
+
+#successMessage {
+    color: green;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+    }
+
+    .form-section, .records-section {
+        padding: 17px;
+    }
+}
+
+/* Login and Registration */
+
+.form-section a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.form-section a:hover {
+    text-decoration: underline;
+}
+
+#userNavigation {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#userNavigation button {
+    margin: 0;
+    width: auto;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 600px) {
+    #userNavigation {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    #welcomeUser {
+        width: 100%;
+        text-align: right;
+    }
+}
+
+/* ADMIN DASHBOARD */
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.stat-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 3px 12px #00000012;
+    border-top: 4px solid #2563eb;
+}
+
+.stat-card h3 {
+    color: #475569;
+    font-size: 15px;
+}
+
+.stat-card p {
+    color: #2563eb;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 10px 0 0;
+}
+
+.admin-contact {
+    background: #f8fafc;
+    border-left: 4px solid #2563eb;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 7px;
+    overflow-wrap: anywhere;
+}
+
+.admin-contact select {
+    margin-top: 10px;
+}
+.hero h2 {
+    color: white;
+}
+
+.hero p {
+    color: #eaf1ff;
+}
+
+/* PROFESSIONAL CONTACTHUB DESIGN */
+
+body {
+    background: #eef2ff;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+header {
+    background: #101d45;
+    padding: 18px 6%;
+}
+
+.navbar h1 {
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+.hero {
+    background: linear-gradient(120deg, #1d4ed8, #6366f1);
+    padding: 55px 15px;
+}
+
+.hero h2 {
+    color: white;
+    font-size: 32px;
+}
+
+.hero p {
+    color: #e0e7ff;
+    font-size: 17px;
+}
+
+.container {
+    max-width: 1100px;
+    width: 92%;
+    margin: 35px auto;
+}
+
+/* Dashboard layout */
+
+#dashboard:not([hidden]) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    align-items: start;
+}
+
+#adminDashboard {
+    grid-column: 1 / -1;
+}
+
+#dashboard .form-section,
+#dashboard .records-section {
+    margin-bottom: 0;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px #1e293b12;
+}
+
+/* Form styling */
+
+.form-section,
+.records-section {
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+}
+
+.form-section h2,
+.records-section h2 {
+    font-size: 23px;
+    margin-top: 0;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px #2563eb20;
+}
+
+/* Buttons */
+
+button {
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+/* Contact cards */
+
+.contact-card,
+.admin-contact {
+    background: #f8faff;
+    border: 1px solid #e2e8f0;
+    border-left: 5px solid #2563eb;
+    border-radius: 10px;
+    padding: 18px;
+    margin-top: 16px;
+}
+
+.contact-card h3,
+.admin-contact h3 {
+    margin-top: 0;
+    color: #1e3a8a;
+}
+
+/* Statistics cards */
+
+.stat-card {
+    border-radius: 13px;
+    transition: 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+}
+
+/* Footer */
+
+footer {
+    background: #101d45;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+/* Mobile responsive */
+
+@media (max-width: 750px) {
+    #dashboard:not([hidden]) {
+        grid-template-columns: 1fr;
+    }
+
+    #adminDashboard {
+        grid-column: 1;
+    }
+
+    .hero h2 {
+        font-size: 25px;
+    }
+
+    .navbar h1 {
+        font-size: 22px;
+    }
+}
+
+/* COLOURED CONTACT STATUS */
+
+.status-select {
+    font-weight: bold;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.status-select.pending {
+    background: #fff7ed;
+    color: #c2410c;
+    border-color: #fed7aa;
+}
+
+.status-select.in-progress {
+    background: #eff6ff;
+    color: #1d4ed8;
+    border-color: #bfdbfe;
+}
+
+.status-select.resolved {
+    background: #f0fdf4;
+    color: #15803d;
+    border-color: #bbf7d0;
+}
+select.status-select {
+    font-weight: bold !important;
+    padding: 12px !important;
+}
+
+select.status-select.pending {
+    background: #ffedd5 !important;
+    color: #c2410c !important;
+    border: 1px solid #fb923c !important;
+}
+
+select.status-select.in-progress {
+    background: #dbeafe !important;
+    color: #1d4ed8 !important;
+    border: 1px solid #60a5fa !important;
+}
+
+select.status-select.resolved {
+    background: #dcfce7 !important;
+    color: #15803d !important;
+    border: 1px solid #4ade80 !important;
+}
+
+/* USER DASHBOARD STATISTICS */
+
+.user-stats {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 5px;
+}
+
+.user-stat-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    border-top: 4px solid #2563eb;
+    box-shadow: 0 4px 15px #00000012;
+    text-align: center;
+}
+
+.user-stat-card h3 {
+    color: #475569;
+    font-size: 14px;
+}
+
+.user-stat-card p {
+    font-size: 30px;
+    font-weight: bold;
+    color: #2563eb;
+    margin: 10px 0 0;
+}
+
+.pending-card {
+    border-color: #f59e0b;
+}
+
+.pending-card p {
+    color: #d97706;
+}
+
+.progress-card {
+    border-color: #3b82f6;
+}
+
+.resolved-card {
+    border-color: #22c55e;
+}
+
+.resolved-card p {
+    color: #16a34a;
+}
+
+@media (max-width: 750px) {
+    .user-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
